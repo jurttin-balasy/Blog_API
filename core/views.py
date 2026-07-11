@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from . import models
-from .serializers import PostSerializer, CategorySerializer, UserSerializer, CommentSerializer, TagSerializer
+from .serializers import PostSerializer, CategorySerializer, UserSerializer, CommentSerializer, TagSerializer, InfoSerializer
 # Create your views here.
 from rest_framework import status
 from django.contrib.auth.models import User
@@ -136,6 +136,12 @@ from django.views.decorators.cache import cache_page
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+
+class InfoViewSet(viewsets.ModelViewSet):
+    queryset = models.Info.objects.all()
+    serializer_class = InfoSerializer
+
+    
 
 class StatisticsViewSet(viewsets.ViewSet):
     def list(self, request):

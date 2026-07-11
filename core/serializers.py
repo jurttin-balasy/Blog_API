@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Post, Comment, Category, Tag
+from .models import Post, Comment, Category, Tag, Info
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -56,3 +56,9 @@ class PostSerializer(serializers.ModelSerializer):
     
 
     
+class InfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Info
+        fields = ('name', 'phone_number')
+
+        

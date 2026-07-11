@@ -22,7 +22,7 @@
 
 from rest_framework.routers import DefaultRouter
 
-from .views import  PostViewSet, CategoryViewSet, UserViewSet, CommentViewSet, TagViewset
+from .views import  PostViewSet, CategoryViewSet, UserViewSet, CommentViewSet, TagViewset, InfoViewSet
 
 router = DefaultRouter()
 router.register(r'posts', PostViewSet, basename='posts')
@@ -31,5 +31,7 @@ router.register(r'categories', CategoryViewSet, basename='categories')
 router.register(r'tags', TagViewset, basename='tags')
 
 router.register(r'comments', CommentViewSet, basename='comments')
+router.register(r'info', InfoViewSet)
+
 
 urlpatterns = router.urls

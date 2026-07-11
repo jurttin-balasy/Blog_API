@@ -47,4 +47,8 @@ class Contact(models.Model):
     phone_number = models.CharField(max_length=100)
 
 
-    
+
+class Info(models.Model):
+    name = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=100)
+
