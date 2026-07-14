@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 from django.contrib.auth.models import User
 
+# Post Modeli (Postlar dizimi)
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
@@ -16,11 +17,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
-
+# Teglar 
 class Tag(models.Model):
     name = models.CharField(max_length=30, verbose_name='teg')
     def __str__(self):
         return self.name
+
+
+# Kommentariyalar
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, verbose_name='Kommentariya', related_name='comments')
@@ -34,7 +38,7 @@ class Comment(models.Model):
     
 
 
-
+# Kategoriyalar
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
