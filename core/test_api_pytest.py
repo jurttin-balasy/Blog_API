@@ -32,7 +32,7 @@ def test_list_posts(client, test_post):
 
     assert response.status_code == status.HTTP_200_OK
     assert len(response.data['results']) == 1
-    # assert response.data['results'][0]['title'] == 'Pytest Test Ataması'
+    assert response.data['results'][0]['title'] == 'Pytest Test Ataması'
 
 @pytest.mark.django_db
 def test_create_post_auth(client, test_user):
