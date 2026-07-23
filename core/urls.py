@@ -33,5 +33,4 @@ router.register(r'tags', TagViewset, basename='tags')
 router.register(r'comments', CommentViewSet, basename='comments')
 router.register(r'info', InfoViewSet)
 
-
 urlpatterns = router.urls

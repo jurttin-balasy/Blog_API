@@ -1,0 +1,19 @@
+# 1. Workflow atı
+name: Salem Beriwshi
+
+# 2. Qashan isleytuǵını (Trigger)
+on: [push]
+
+# 3. Jumıslar
+jobs:
+  say-hello:
+    # Qaysı kompyuterde?
+    runs-on: ubuntu-latest
+
+    # Qádemler
+    steps:
+      - name: Terminalǵa jazıw
+        run: echo "Assalawma áleykum, GitHub Actions!"
+
+      - name: Python versiyasın tekseriw
+        run: python --version
