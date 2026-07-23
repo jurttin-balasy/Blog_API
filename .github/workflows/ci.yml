@@ -17,3 +17,6 @@ jobs:
 
       - name: Python versiyasın tekseriw
         run: python --version
+
+      - name: Hello World
+        run: print("Hello World!")
